@@ -1,0 +1,17 @@
+import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int a = sc.nextInt();
+        int x=0;
+        int y=1;
+        System.out.println(x+" "+y+" ");
+        for(int i=1; i<=a-1; i++) {
+            int s = x+y;
+            System.out.println(s+" ");
+            x=y;
+            y=s;
+        }
+    }
+}
+
