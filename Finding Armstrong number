@@ -1,0 +1,25 @@
+import java.util.*;
+public class Main {
+    public static void main(String args[]) {
+        Scanner sc = new Scanner(System.in);
+        int n=sc.nextInt();
+        int ans=n;
+        int digit=0;
+        int res=0;
+        while(n>0) {
+            n=n/10;
+            digit++;
+        }
+        n=ans;
+        while(n>0) {
+            int r=n%10;
+            int mul=1;
+            for(int i=1; i<=digit; i++) {
+                mul=mul*r;
+            }
+            res = res+mul;
+            n=n/10;
+        }
+        System.out.println((res==ans)?"amstrong":"Not");
+    }
+}
